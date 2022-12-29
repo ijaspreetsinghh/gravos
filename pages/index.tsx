@@ -23,7 +23,7 @@ export default function Home() {
           margin: 0,
           padding: 0,
         }}>
-        <Container fluid css={{ display: "flex", width: "100%" }}>
+        <Container fluid css={{ display: "flex", width: "100%", padding: 0 }}>
           <div style={{ padding: 0, paddingTop: 48, paddingLeft: 48 }}>
             <Text h1 className={montserrat.className} css={{ fontSize: 64 }}>
               The Future in
@@ -61,7 +61,7 @@ export default function Home() {
           />
         </Container>
 
-        <div>
+        <div style={{ margin: 0, padding: 0 }}>
           <Container
             css={{
               width: "auto",
@@ -103,7 +103,7 @@ export default function Home() {
                   display: "flex",
                   margin: "auto",
                 }}>
-                Solar
+                Solar&nbsp;
               </Text>
               <Text
                 h3
@@ -140,6 +140,7 @@ export default function Home() {
               height: "auto",
               background: "rgba(249, 241, 241, 0.87)",
               right: 20,
+              margin: 0,
 
               position: "absolute",
               zIndex: 2,
@@ -226,24 +227,149 @@ export default function Home() {
               </div>
             </div>
           </Container>
-          <Image
-            draggable={false}
-            src='/house.png'
-            alt='house'
-            objectFit='cover'
-            // autoResize={true}
-            css={{
-              width: "100%",
-              margin: 0,
-              zIndex: 0,
-              padding: 0,
-              display: "flex",
-            }}
-          />
+          <div style={{ position: "relative" }}>
+            <div
+              style={{
+                width: "100%",
+                height: "auto",
+                background: "rgba(14, 14, 14, 0.7)",
+                margin: 0,
+                padding: 16,
+                bottom: 0,
+                position: "absolute",
+                zIndex: 3,
+                display: "flex",
+              }}>
+              <div
+                style={{
+                  width: "100%",
+
+                  margin: "auto",
+                  height: "100%",
+
+                  justifyContent: "start",
+                  alignContent: "start",
+                }}>
+                <Text
+                  h3
+                  className={montserrat.className}
+                  css={{
+                    fontSize: 20,
+                    color: "white",
+                    display: "flex",
+                    width: "auto",
+                    flexDirection: "column",
+                    height: "auto",
+                    margin: "auto",
+                  }}>
+                  Finally a Solar Energy System that Really Works.
+                </Text>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "end",
+                  alignContent: "end",
+                  alignItems: "center",
+                }}>
+                <Image src='/info_1.svg' alt='EV Charging' width={130} />
+                <SizedBox width={10} />
+                <Image src='/info_2.svg' alt='EV Charging' width={83} />
+                <SizedBox width={10} />
+                <Image src='/info_3.svg' alt='EV Charging' width={134} />
+                <SizedBox width={10} />
+                <Image src='/info_4.svg' alt='EV Charging' width={92} />
+                <SizedBox width={10} />
+                <Image src='/info_5.svg' alt='EV Charging' width={92} />
+              </div>
+            </div>
+            <Image
+              draggable={false}
+              src='/house.png'
+              alt='house'
+              objectFit='cover'
+              // autoResize={true}
+              css={{
+                width: "100%",
+                margin: 0,
+                zIndex: 0,
+                padding: 0,
+                display: "flex",
+              }}
+            />
+          </div>
         </div>
       </div>
 
-      <div>
+      <div style={{ position: "relative" }}>
+        <div
+          style={{
+            width: "100%",
+            height: "auto",
+            background: "rgba(14, 14, 14, 0.7)",
+            margin: 0,
+            padding: 16,
+            top: 0,
+            position: "absolute",
+            zIndex: 3,
+            display: "flex",
+          }}>
+          <div
+            style={{
+              width: "100%",
+
+              margin: "auto",
+              height: "100%",
+
+              justifyContent: "start",
+              alignContent: "start",
+            }}>
+            <Text
+              h3
+              className={montserrat.className}
+              css={{
+                fontSize: 20,
+                color: "white",
+                display: "flex",
+                width: "auto",
+                flexDirection: "column",
+                height: "auto",
+                margin: "auto",
+              }}>
+              Learn How to Save 100% on your Power Bill
+            </Text>
+            <SizedBox height={16} />
+            <Row>
+              <Button
+                auto
+                className={montserrat.className}
+                css={{
+                  background: "#8205E9",
+                  borderRadius: 5,
+                  fontSize: 16,
+                  width: 94,
+
+                  fontWeight: "bold",
+                }}>
+                Get
+              </Button>
+              <SizedBox width={24} />
+              <Button
+                auto
+                className={montserrat.className}
+                css={{
+                  background: "#00C2FF",
+                  borderRadius: 5,
+                  fontSize: 16,
+                  width: 94,
+
+                  fontWeight: "bold",
+                }}>
+                FREE CONSULT
+              </Button>
+            </Row>
+          </div>
+        </div>
         <Image
           draggable={false}
           src='/hero_2.png'
@@ -258,6 +384,290 @@ export default function Home() {
             display: "flex",
           }}
         />
+      </div>
+      <div
+        style={{
+          width: "100%",
+          height: "auto",
+          background: "black",
+          margin: 0,
+          padding: 16,
+          bottom: 0,
+
+          zIndex: 3,
+          display: "flex",
+        }}>
+        <div
+          style={{
+            display: "flex",
+            margin: "auto",
+            justifyContent: "center",
+            alignContent: "center",
+            alignItems: "center",
+          }}>
+          <Image src='/info_6.svg' alt='EV Charging' height={80} />
+          <SizedBox width={10} />
+          <Image src='/info_7.svg' alt='EV Charging' height={62} />
+          <SizedBox width={10} />
+          <Image src='/info_8.svg' alt='EV Charging' height={60} />
+          <SizedBox width={10} />
+          <Image src='/info_9.svg' alt='EV Charging' height={64} />
+        </div>
+      </div>
+      <div
+        style={{
+          width: "100%",
+          height: "auto",
+          background: "white",
+          margin: "auto",
+          padding: 16,
+          paddingTop: 48,
+          paddingBottom: 48,
+          bottom: 0,
+          display: "flex",
+          justifyContent: "space-evenly",
+        }}>
+        <div
+          style={{
+            display: "block",
+
+            justifyContent: "start",
+            alignContent: "start",
+            alignItems: "start",
+          }}>
+          <Text
+            h6
+            className={montserrat.className}
+            css={{
+              fontSize: 16,
+              fontWeight: "semibold",
+              color: "black",
+              display: "flex",
+              width: "auto",
+              flexDirection: "column",
+              height: "auto",
+              margin: "auto",
+            }}>
+            Security
+          </Text>
+          <SizedBox height={8} />
+          <Text
+            h6
+            className={montserrat.className}
+            css={{
+              fontSize: 20,
+              fontWeight: "bold",
+              color: "black",
+              display: "flex",
+              width: "auto",
+              flexDirection: "column",
+              height: "auto",
+              margin: "auto",
+            }}>
+            Access Power in Any Weather and Situation
+          </Text>
+          <SizedBox height={16} />
+          <div style={{ display: "flex" }}>
+            <Button
+              auto
+              className={montserrat.className}
+              css={{
+                background: "#8205E9",
+                borderRadius: 5,
+                fontSize: 16,
+                width: 94,
+
+                fontWeight: "bold",
+              }}>
+              Get
+            </Button>
+            <SizedBox width={24} />
+            <Button
+              auto
+              className={montserrat.className}
+              css={{
+                background: "#00C2FF",
+                borderRadius: 5,
+                fontSize: 16,
+                width: 94,
+
+                fontWeight: "bold",
+              }}>
+              FREE CONSULT
+            </Button>
+          </div>
+        </div>
+        <div>
+          <Text
+            h6
+            className={montserrat.className}
+            css={{
+              fontSize: 14,
+              fontWeight: "semibold",
+              color: "black",
+              display: "flex",
+              maxWidth: 500,
+              width: "auto",
+              flexDirection: "column",
+              height: "auto",
+              margin: "auto",
+            }}>
+            Our system has an integrated Kinetic and battery system that stores
+            80% of your solar energy for backup protection, so when the grid
+            goes down your power stays on. Your system detects outages and
+            automatically continues power output running your home for
+            days/weeks/months.
+          </Text>
+        </div>
+      </div>
+
+      <div style={{ position: "relative" }}>
+        <Image
+          draggable={false}
+          src='/hero_3.jpg'
+          alt='lightning'
+          objectFit='cover'
+          css={{
+            width: "100%",
+            margin: 0,
+            zIndex: 0,
+            padding: 0,
+            display: "flex",
+          }}
+        />
+      </div>
+      <div
+        style={{
+          width: "100%",
+          height: "auto",
+          background: "black",
+          margin: 0,
+          padding: 16,
+          bottom: 0,
+
+          zIndex: 3,
+          display: "flex",
+        }}>
+        <div
+          style={{
+            display: "flex",
+            margin: "auto",
+            justifyContent: "center",
+            alignContent: "center",
+            alignItems: "center",
+          }}>
+          <Image src='/info_10.svg' alt='EV Charging' height={80} />
+          <SizedBox width={10} />
+          <Image src='/info_11.svg' alt='EV Charging' height={62} />
+          <SizedBox width={10} />
+          <Image src='/info_12.svg' alt='EV Charging' height={60} />
+          <SizedBox width={10} />
+          <Image src='/info_9.svg' alt='EV Charging' height={64} />
+        </div>
+      </div>
+      <div
+        style={{
+          width: "100%",
+          height: "auto",
+          background: "white",
+          margin: "auto",
+          padding: 16,
+          paddingTop: 48,
+          paddingBottom: 48,
+          bottom: 0,
+          display: "flex",
+          justifyContent: "space-evenly",
+        }}>
+        <div
+          style={{
+            display: "block",
+
+            justifyContent: "start",
+            alignContent: "start",
+            alignItems: "start",
+          }}>
+          <Text
+            h6
+            className={montserrat.className}
+            css={{
+              fontSize: 16,
+              fontWeight: "semibold",
+              color: "black",
+              display: "flex",
+              width: "auto",
+              flexDirection: "column",
+              height: "auto",
+              margin: "auto",
+            }}>
+            Ultimate Solution
+          </Text>
+          <SizedBox height={8} />
+          <Text
+            h6
+            className={montserrat.className}
+            css={{
+              fontSize: 20,
+              fontWeight: "bold",
+              color: "black",
+              display: "flex",
+              width: "auto",
+              flexDirection: "column",
+              height: "auto",
+              margin: "auto",
+            }}>
+            Constant Power & Backup for 20+ years
+          </Text>
+          <SizedBox height={16} />
+          <div style={{ display: "flex" }}>
+            <Button
+              auto
+              className={montserrat.className}
+              css={{
+                background: "#8205E9",
+                borderRadius: 5,
+                fontSize: 16,
+                width: 94,
+
+                fontWeight: "bold",
+              }}>
+              Get
+            </Button>
+            <SizedBox width={24} />
+            <Button
+              auto
+              className={montserrat.className}
+              css={{
+                background: "#00C2FF",
+                borderRadius: 5,
+                fontSize: 16,
+                width: 94,
+
+                fontWeight: "bold",
+              }}>
+              FREE CONSULT
+            </Button>
+          </div>
+        </div>
+        <div>
+          <Text
+            h6
+            className={montserrat.className}
+            css={{
+              fontSize: 14,
+              fontWeight: "semibold",
+              color: "black",
+              display: "flex",
+              maxWidth: 500,
+              width: "auto",
+              flexDirection: "column",
+              height: "auto",
+              margin: "auto",
+            }}>
+            Our Kinetic Storage System keeps releasing power for
+            days/weeks/months long after your neighbors solar systems and
+            batteries fail.
+          </Text>
+        </div>
       </div>
     </div>
   );
