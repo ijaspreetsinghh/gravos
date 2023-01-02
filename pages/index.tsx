@@ -7,6 +7,9 @@ import { montserrat } from "./_app";
 import { Text, Container, Image, Button, Row } from "@nextui-org/react";
 import SizedBox from "../components/sized_box";
 import React, { useState } from "react";
+import HeaderText from "../components/header_text";
+import WhyKinetic from "../components/why_kinetic_overlay";
+import WhyLoser from "../components/why_loser";
 
 export default function Home() {
   const [index, setIndex] = useState(0);
@@ -20,6 +23,10 @@ export default function Home() {
         margin: 0,
         padding: 0,
       }}>
+      <Head>
+        <title>Gravos</title>{" "}
+      </Head>
+
       <div
         style={{
           height: "100%",
@@ -27,29 +34,13 @@ export default function Home() {
           margin: 0,
           padding: 0,
         }}>
-        <Container fluid css={{ display: "flex", width: "100%", padding: 0 }}>
-          <div style={{ padding: 0, paddingTop: 48, paddingLeft: 48 }}>
-            <Text h1 className={montserrat.className} css={{ fontSize: 64 }}>
-              The Future in
-            </Text>
-            <Text
-              h1
-              className={montserrat.className}
-              css={{ fontSize: 64, color: "white" }}>
-              Renewable Energy
-            </Text>
-            <Row css={{ display: "flex", margin: 0, padding: 0 }}>
-              <Text h1 className={montserrat.className} css={{ fontSize: 64 }}>
-                Beyond Just&nbsp;
-              </Text>
-              <Text
-                h1
-                className={montserrat.className}
-                css={{ fontSize: 64, color: "#ffe500" }}>
-                Solar
-              </Text>
-            </Row>
-          </div>
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            padding: 0,
+          }}>
+          <HeaderText />
           <Image
             draggable={false}
             src='/us_veteran.png'
@@ -61,189 +52,210 @@ export default function Home() {
               zIndex: 0,
               padding: 0,
               display: "flex",
+              "@media only screen and (max-width: 950px)": {
+                display: "none",
+              },
             }}
           />
-        </Container>
+        </div>
 
         <div style={{ margin: 0, padding: 0 }}>
+          <Row
+            justify='space-between'
+            align='flex-start'
+            css={{ position: "relative", top: 70 }}>
+            <div
+              style={{
+                display: "flex",
+                width: "40%",
+                padding: 0,
+                flexDirection: "column",
+                position: "absolute",
+                zIndex: 3,
+                top: 100,
+              }}>
+              <Image
+                draggable={false}
+                src='/us_veteran.png'
+                alt='U.S. Veteran'
+                objectFit='contain'
+                css={{
+                  width: 150,
+                  margin: 0,
+                  zIndex: 0,
+                  padding: 0,
+                  display: "none",
+
+                  "@media only screen and (min-width: 701px) and (max-width: 949px)":
+                    {
+                      display: "block",
+                    },
+                }}
+              />
+            </div>
+            <Container
+              css={{
+                width: "auto",
+                height: "auto",
+                background: "rgba(0, 0, 0, 0.75)",
+
+                flexDirection: "column",
+                display: "flex",
+                marginTop: 0,
+                marginLeft: 20,
+                marginRight: 0,
+                marginBottom: 0,
+                position: "absolute",
+                zIndex: 3,
+                top: 200,
+                borderRadius: 10,
+                boxShadow: "5px 5px 4px rgba(0, 0, 0, 0.25)",
+                padding: 12,
+                "@media only screen and (max-width: 950px)": {
+                  display: "none",
+                },
+              }}>
+              <WhyLoser />
+            </Container>
+            <Container
+              fluid
+              css={{
+                right: 20,
+                position: "absolute",
+                zIndex: 2,
+                margin: 0,
+                padding: 0,
+
+                display: "flex",
+                width: "fit-content",
+                "@media only screen and (max-width: 700px)": {
+                  position: "absolute",
+                  margin: "auto",
+                  display: "inline-flex",
+                  left: 10,
+                  padding: 16,
+
+                  justifyContent: "center",
+                },
+                "@media only screen and (max-width: 360px)": {
+                  left: 0,
+                },
+              }}>
+              {" "}
+              <div
+                style={{
+                  display: "flex",
+                  width: "100%",
+                  padding: 0,
+                  margin: "auto",
+                }}>
+                <Image
+                  draggable={false}
+                  src='/us_veteran.png'
+                  alt='U.S. Veteran'
+                  objectFit='contain'
+                  css={{
+                    width: 150,
+                    margin: "auto",
+                    zIndex: 0,
+                    padding: 0,
+                    display: "none",
+                    "@media only screen and  (max-width: 700px)": {
+                      display: "flex",
+                      marginBottom: 32,
+                    },
+                  }}
+                />
+              </div>
+              <WhyKinetic />
+            </Container>
+          </Row>
           <Container
             css={{
               width: "auto",
               height: "auto",
               background: "rgba(0, 0, 0, 0.75)",
-              left: 20,
+
               flexDirection: "column",
-              display: "flex",
-              margin: "auto",
+              display: "none",
+              marginTop: 0,
+              marginLeft: 20,
+              marginRight: 0,
+              marginBottom: 0,
               position: "absolute",
-              zIndex: 2,
-              top: "67%",
+              zIndex: 3,
+              bottom: 0,
               borderRadius: 10,
               boxShadow: "5px 5px 4px rgba(0, 0, 0, 0.25)",
               padding: 12,
+              "@media only screen and (max-width: 950px)": {
+                display: "flex",
+                justifyContent: "center",
+                margin: "auto",
+                width: "fit-content",
+                flexDirection: "row",
+              },
             }}>
-            <div style={{ display: "flex", margin: "auto" }}>
-              <Text
-                h3
-                className={montserrat.className}
-                css={{
-                  color: "#fff",
-                  fontSize: 20,
-                  fontWeight: "bold",
-                  flexDirection: "column",
-                  display: "flex",
-                  margin: "auto",
-                }}>
-                Why just having&nbsp;
-              </Text>
-              <Text
-                h3
-                className={montserrat.className}
-                css={{
-                  color: "#FFE500",
-                  fontSize: 20,
-                  fontWeight: "bold",
-                  flexDirection: "column",
-                  display: "flex",
-                  margin: "auto",
-                }}>
-                Solar&nbsp;
-              </Text>
-              <Text
-                h3
-                className={montserrat.className}
-                css={{
-                  color: "#FF0000",
-                  fontSize: 20,
-                  fontWeight: "bold",
-                  flexDirection: "column",
-                  display: "flex",
-                  margin: "auto",
-                }}>
-                is a BIG LOSER?
-              </Text>
-              <SizedBox width={12} />
-              <Button
-                auto
-                className={montserrat.className}
-                css={{
-                  background: "#ff0000",
-                  borderRadius: 5,
-                  fontSize: 16,
-                  width: 94,
-
-                  fontWeight: "bold",
-                }}>
-                Truth
-              </Button>
-            </div>
+            <Row justify='center' align='center'>
+              <WhyLoser />
+            </Row>
           </Container>
-          <Container
+          <Image
+            draggable={false}
+            src='/house.png'
+            alt='house'
+            objectFit='cover'
             css={{
-              maxWidth: 410,
-              height: "auto",
-              background: "rgba(249, 241, 241, 0.87)",
-              right: 20,
+              width: "100%",
               margin: 0,
+              zIndex: 0,
+              padding: 0,
+              display: "flex",
 
-              position: "absolute",
-              zIndex: 2,
-              borderRadius: 10,
-              boxShadow: "5px 5px 4px rgba(0, 0, 0, 0.25)",
+              height: 600,
+
+              "@media only screen and (max-width: 500px)": {
+                height: 600,
+              },
+            }}
+          />
+
+          <div
+            style={{
+              width: "100%",
+              height: "auto",
+              background: "black",
+              margin: 0,
               padding: 16,
+              bottom: 0,
+
+              display: "flex",
             }}>
-            <div style={{ display: "flex" }}>
-              <Text
-                h3
-                className={montserrat.className}
-                css={{ color: "#000000", fontSize: 22 }}>
-                What is&nbsp;
-              </Text>
-              <Text
-                h3
-                className={montserrat.className}
-                css={{ color: "#8205E9", fontSize: 22 }}>
-                Kinetic Energy Storage
-              </Text>
-              <Text
-                h3
-                className={montserrat.className}
-                css={{ color: "#000000", fontSize: 22 }}>
-                ?
-              </Text>
-            </div>
-            <SizedBox height={20} />
-            <div>
-              <Text
-                h6
-                className={montserrat.className}
-                css={{ fontSize: 12, color: "#000000" }}>
-                We can see solar panels are getting 100% exposure to the sun,
-                that&apos;s why they get hot. Unfortunately, only 20% of that
-                energy is making it to your system due to many limitations. The
-                other 80% bleeds off and is a complete loss
-              </Text>
-              <SizedBox height={16} />
-              <Text
-                h6
-                className={montserrat.className}
-                css={{ fontSize: 12, color: "#000000" }}>
-                Our system works by capturing the other 80% loss and storing it
-                for use later in our GRAVOS kinetic storage system. Our Kinetic
-                Storage allows you to access the energy 24/7 night or day / rain
-                or shine.
-              </Text>
-              <SizedBox height={24} />
-              <Text
-                h6
-                className={montserrat.className}
-                css={{ fontSize: 16, color: "#8205E9" }}>
-                Use Less than Half 1/2 the amount of Panels
-              </Text>
-              <SizedBox height={24} />
-              <div style={{ display: "flex" }}>
-                <Button
-                  auto
-                  className={montserrat.className}
-                  css={{
-                    background: "#8205E9",
-                    borderRadius: 5,
-                    fontSize: 16,
-                    width: 94,
-
-                    fontWeight: "bold",
-                  }}>
-                  More
-                </Button>
-                <SizedBox width={10} />
-                <Button
-                  auto
-                  className={montserrat.className}
-                  css={{
-                    background: "#00C2FF",
-                    borderRadius: 5,
-                    fontSize: 16,
-
-                    fontWeight: "bold",
-                  }}>
-                  Free Consult
-                </Button>
-              </div>
-            </div>
-          </Container>
-          <div style={{ position: "relative" }}>
             <div
               style={{
                 width: "100%",
-                height: "auto",
-                background: "rgba(14, 14, 14, 0.7)",
-                margin: 0,
-                padding: 16,
-                bottom: 0,
-                position: "absolute",
-                zIndex: 3,
-                display: "flex",
+
+                margin: "auto",
+                height: "100%",
+
+                justifyContent: "start",
+                alignContent: "start",
               }}>
+              <Text
+                h3
+                className={montserrat.className}
+                css={{
+                  fontSize: 20,
+                  color: "white",
+                  display: "flex",
+                  width: "auto",
+                  flexDirection: "column",
+                  height: "auto",
+                  margin: "auto",
+                }}>
+                Finally a Solar Energy System that Really Works.
+              </Text>
+              <SizedBox height={12} />
               <div
                 style={{
                   width: "100%",
@@ -258,7 +270,7 @@ export default function Home() {
                   h3
                   className={montserrat.className}
                   css={{
-                    fontSize: 20,
+                    fontSize: 14,
                     color: "white",
                     display: "flex",
                     width: "auto",
@@ -266,114 +278,62 @@ export default function Home() {
                     height: "auto",
                     margin: "auto",
                   }}>
-                  Finally a Solar Energy System that Really Works.
+                  Learn How to Save 100% on your Power Bill
                 </Text>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "end",
-                  alignContent: "end",
-                  alignItems: "center",
-                }}>
-                <Image src='/info_1.svg' alt='EV Charging' width={130} />
-                <SizedBox width={10} />
-                <Image src='/info_2.svg' alt='EV Charging' width={83} />
-                <SizedBox width={10} />
-                <Image src='/info_3.svg' alt='EV Charging' width={134} />
-                <SizedBox width={10} />
-                <Image src='/info_4.svg' alt='EV Charging' width={92} />
-                <SizedBox width={10} />
-                <Image src='/info_5.svg' alt='EV Charging' width={92} />
+                <SizedBox height={16} />
+                <Row>
+                  <Button
+                    auto
+                    className={montserrat.className}
+                    css={{
+                      background: "#8205E9",
+                      borderRadius: 5,
+                      fontSize: 16,
+                      width: 94,
+
+                      fontWeight: "bold",
+                    }}>
+                    Get
+                  </Button>
+                  <SizedBox width={24} />
+                  <Button
+                    auto
+                    className={montserrat.className}
+                    css={{
+                      background: "#00C2FF",
+                      borderRadius: 5,
+                      fontSize: 16,
+                      width: 94,
+
+                      fontWeight: "bold",
+                    }}>
+                    FREE CONSULT
+                  </Button>
+                </Row>
               </div>
             </div>
-            <Image
-              draggable={false}
-              src='/house.png'
-              alt='house'
-              objectFit='cover'
-              // autoResize={true}
-              css={{
-                width: "100%",
-                margin: 0,
-                zIndex: 0,
-                padding: 0,
+            <div
+              style={{
                 display: "flex",
-              }}
-            />
+                justifyContent: "end",
+                alignContent: "end",
+                alignItems: "center",
+              }}>
+              <Image src='/info_1.svg' alt='EV Charging' width={130} />
+              <SizedBox width={10} />
+              <Image src='/info_2.svg' alt='EV Charging' width={83} />
+              <SizedBox width={10} />
+              <Image src='/info_3.svg' alt='EV Charging' width={134} />
+              <SizedBox width={10} />
+              <Image src='/info_4.svg' alt='EV Charging' width={92} />
+              <SizedBox width={10} />
+              <Image src='/info_5.svg' alt='EV Charging' width={92} />
+            </div>
           </div>
         </div>
       </div>
 
       <div style={{ position: "relative" }}>
-        <div
-          style={{
-            width: "100%",
-            height: "auto",
-            background: "rgba(14, 14, 14, 0.7)",
-            margin: 0,
-            padding: 16,
-            top: 0,
-            position: "absolute",
-            zIndex: 3,
-            display: "flex",
-          }}>
-          <div
-            style={{
-              width: "100%",
-
-              margin: "auto",
-              height: "100%",
-
-              justifyContent: "start",
-              alignContent: "start",
-            }}>
-            <Text
-              h3
-              className={montserrat.className}
-              css={{
-                fontSize: 20,
-                color: "white",
-                display: "flex",
-                width: "auto",
-                flexDirection: "column",
-                height: "auto",
-                margin: "auto",
-              }}>
-              Learn How to Save 100% on your Power Bill
-            </Text>
-            <SizedBox height={16} />
-            <Row>
-              <Button
-                auto
-                className={montserrat.className}
-                css={{
-                  background: "#8205E9",
-                  borderRadius: 5,
-                  fontSize: 16,
-                  width: 94,
-
-                  fontWeight: "bold",
-                }}>
-                Get
-              </Button>
-              <SizedBox width={24} />
-              <Button
-                auto
-                className={montserrat.className}
-                css={{
-                  background: "#00C2FF",
-                  borderRadius: 5,
-                  fontSize: 16,
-                  width: 94,
-
-                  fontWeight: "bold",
-                }}>
-                FREE CONSULT
-              </Button>
-            </Row>
-          </div>
-        </div>
         <Image
           draggable={false}
           src='/hero_2.png'
@@ -424,7 +384,8 @@ export default function Home() {
           height: "auto",
           background: "white",
           margin: "auto",
-          padding: 16,
+          paddingLeft: 16,
+          paddingRight: 0,
           paddingTop: 48,
           paddingBottom: 48,
           bottom: 0,
@@ -576,7 +537,8 @@ export default function Home() {
           height: "auto",
           background: "white",
           margin: "auto",
-          padding: 16,
+          paddingLeft: 16,
+          paddingRight: 16,
           paddingTop: 48,
           paddingBottom: 48,
           bottom: 0,
@@ -1373,7 +1335,8 @@ export default function Home() {
           height: "auto",
           background: "white",
           margin: "auto",
-          padding: 16,
+          paddingLeft: 16,
+          paddingRight: 16,
           paddingTop: 48,
           paddingBottom: 48,
           bottom: 0,
@@ -1499,7 +1462,8 @@ export default function Home() {
           height: "auto",
           background: "white",
           margin: "auto",
-          padding: 16,
+          paddingLeft: 16,
+          paddingRight: 16,
           paddingTop: 48,
           paddingBottom: 48,
           bottom: 0,
@@ -1598,7 +1562,7 @@ export default function Home() {
 
       <div style={{ background: "black", paddingTop: 64 }}>
         <Row justify='center' align='center'>
-          <div style={{ width: "50%" }}>
+          <div style={{ width: "40%" }}>
             <Image
               draggable={false}
               src='/solar.png'
@@ -1613,7 +1577,7 @@ export default function Home() {
             />
           </div>
           <div
-            style={{ width: "50%", justifyContent: "center", margin: "auto" }}>
+            style={{ width: "60%", justifyContent: "center", margin: "auto" }}>
             <Row justify='center'>
               <Text
                 h6
