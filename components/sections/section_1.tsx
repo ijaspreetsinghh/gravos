@@ -1,3 +1,4 @@
+"use client";
 import { Button, Row, Text, Image, Container } from "@nextui-org/react";
 import { montserrat } from "../../pages/_app";
 import HeaderText from "../header_text";

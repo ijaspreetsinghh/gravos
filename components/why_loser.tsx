@@ -1,3 +1,4 @@
+"use client";
 import { Button, Container, Image, Text } from "@nextui-org/react";
 import { montserrat } from "../pages/_app";
 import SizedBox from "./sized_box";

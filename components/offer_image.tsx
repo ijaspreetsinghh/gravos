@@ -1,3 +1,4 @@
+"use client";
 import { Image } from "@nextui-org/react";
 const OfferImage = () => {
   return (

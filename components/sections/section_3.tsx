@@ -1,4 +1,4 @@
-import SizedBox from "../sized_box";
+"use client";
 import { Container, Image } from "@nextui-org/react";
 const SectionThree = () => {
   return (
