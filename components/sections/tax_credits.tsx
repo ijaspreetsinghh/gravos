@@ -6,7 +6,7 @@ import SizedBox from "../sized_box";
 
 const TaxCredits = () => {
   return (
-    <div style={{ background: "#00c2ff" }}>
+    <div style={{ background: "#7f21e3" }}>
       <Row
         css={{
           display: "flex",
@@ -17,7 +17,7 @@ const TaxCredits = () => {
         <Container
           xs
           css={{
-            background: "#00c2ff",
+            background: "#7f21e3",
             padding: 32,
             height: 500,
 
@@ -245,7 +245,42 @@ const TaxCredits = () => {
               }}>
               $4,000 - $8,000
             </Text>
-          </Row>{" "}
+          </Row>
+          <SizedBox height={10} />
+          <div style={{ background: "white", width: "100%", height: 2 }}></div>
+          <SizedBox height={10} />
+          <Row justify='space-between'>
+            <Text
+              h4
+              className={montserrat.className}
+              css={{
+                fontSize: 14,
+                fontWeight: "$semibold",
+                color: "white",
+                display: "flex",
+
+                flexDirection: "column",
+                height: "auto",
+                margin: 0,
+              }}>
+              Electrical Box Upgrade
+            </Text>
+            <Text
+              h4
+              className={montserrat.className}
+              css={{
+                fontSize: 14,
+                fontWeight: "$semibold",
+                color: "white",
+                display: "flex",
+
+                flexDirection: "column",
+                height: "auto",
+                margin: 0,
+              }}>
+              $4,000
+            </Text>
+          </Row>
           <SizedBox height={10} />
           <div style={{ background: "white", width: "100%", height: 2 }}></div>
           <SizedBox height={20} />
@@ -257,7 +292,7 @@ const TaxCredits = () => {
                 auto
                 className={montserrat.className}
                 css={{
-                  background: "#8205E9",
+                  background: "#00c2ff",
                   borderRadius: 5,
                   fontSize: 16,
                   width: 94,
@@ -270,18 +305,20 @@ const TaxCredits = () => {
           </Row>
           <SizedBox height={10} />
         </Container>{" "}
-        <div style={{ background: "#00c2ff", padding: 10 }}>
+        <div style={{ background: "#7f21e3", padding: 10 }}>
           <Container
-            responsive={false}
+            sm
             css={{
               background: "white",
               padding: 32,
-              height: 360,
+              height: 440,
               marginTop: 20,
+
               marginRight: 20,
               overflow: "scroll",
               "@media only screen and (max-width: 1000px)": {
                 margin: "auto",
+                height: 360,
               },
             }}>
             <Text

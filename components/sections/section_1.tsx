@@ -1,4 +1,3 @@
-"use client";
 import { Button, Row, Text, Image, Container } from "@nextui-org/react";
 import { montserrat } from "../../pages/_app";
 import HeaderText from "../header_text";
@@ -18,66 +17,13 @@ const HeaderSection = () => {
         background: "#00C2FF",
         padding: 0,
       }}>
-      <div
-        style={{
-          display: "flex",
-          width: "100%",
-          padding: 0,
-        }}>
-        <HeaderText />
-        <Image
-          draggable={false}
-          src='/us_veteran.png'
-          alt='U.S. Veteran'
-          objectFit='contain'
-          css={{
-            width: 180,
-            margin: 0,
-            zIndex: 0,
-            padding: 0,
-            display: "flex",
-            "@media only screen and (max-width: 950px)": {
-              display: "none",
-            },
-          }}
-        />
-      </div>
+      <HeaderText />
 
       <div style={{ margin: 0, padding: 0 }}>
         <Row
           justify='space-between'
           align='flex-start'
           css={{ position: "relative", top: 70 }}>
-          <div
-            style={{
-              display: "flex",
-              width: "40%",
-              padding: 0,
-              flexDirection: "column",
-              position: "absolute",
-              zIndex: 3,
-              top: 350,
-            }}>
-            <Image
-              draggable={false}
-              src='/us_veteran.png'
-              alt='U.S. Veteran'
-              objectFit='contain'
-              css={{
-                width: 180,
-                margin: 0,
-                zIndex: 0,
-                padding: 0,
-                display: "none",
-
-                "@media only screen and (min-width: 701px) and (max-width: 950px)":
-                  {
-                    display: "block",
-                  },
-              }}
-            />
-          </div>
-
           <Container
             css={{
               display: "none",
@@ -158,32 +104,6 @@ const HeaderSection = () => {
                 left: 0,
               },
             }}>
-            <div
-              style={{
-                display: "flex",
-                width: "100%",
-                padding: 0,
-                margin: "auto",
-              }}>
-              <Image
-                draggable={false}
-                src='/us_veteran.png'
-                alt='U.S. Veteran'
-                objectFit='contain'
-                css={{
-                  width: 180,
-                  margin: "auto",
-                  zIndex: 0,
-                  padding: 0,
-                  display: "none",
-
-                  "@media only screen and  (max-width: 700px)": {
-                    display: "flex",
-                    marginBottom: 32,
-                  },
-                }}
-              />
-            </div>
             <WhyKinetic />
           </Container>
         </Row>

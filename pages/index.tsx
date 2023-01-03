@@ -1,5 +1,4 @@
 "use client";
-
 import Head from "next/head";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
@@ -19,6 +18,7 @@ import Comparison from "../components/sections/comparison";
 import TaxCredits from "../components/sections/tax_credits";
 import AppSnapshots from "../components/sections/app_snapshots";
 import PanelDetails from "../components/sections/panel_details";
+import MyNavBar from "../components/sections/navbar";
 
 export default function Home() {
   const [index, setIndex] = useState(0);
@@ -35,6 +35,7 @@ export default function Home() {
       <Head>
         <title>Gravos</title>
       </Head>
+      <MyNavBar />
       <HeaderSection />
       <Row
         align='center'
@@ -306,16 +307,18 @@ export default function Home() {
             className={montserrat.className}
             color='white'
             css={{ fontSize: 20, textAlign: "center" }}>
-            80% Captured by Gravos Kinetic Storage
+            Kinetic Systems Make a Difference & 80% More Power Over Solar Alone
           </Text>
           <SizedBox height={20} />
           <Image
             src='/capacity.svg'
             alt='Gravos Capacity'
             css={{
+              height: 199,
               "@media only screen and (max-width: 450px)": {
                 paddingLeft: 8,
                 paddingRight: 8,
+                height: 170,
               },
             }}
           />
@@ -497,7 +500,7 @@ export default function Home() {
       <div style={{ position: "relative", background: "white" }}>
         <Image
           draggable={false}
-          src='/demo.svg'
+          src='/demo.jpg'
           alt='lightning'
           objectFit='cover'
           css={{
