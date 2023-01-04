@@ -328,6 +328,7 @@ export default function Home() {
         <SliderPros />
       </div>
       <div style={{ position: "relative", background: "white" }}>
+        <SizedBox height={30} />
         <Image
           draggable={false}
           src='/demo.jpg'
