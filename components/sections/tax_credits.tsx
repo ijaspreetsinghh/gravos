@@ -19,7 +19,7 @@ const TaxCredits = () => {
           css={{
             background: "#7f21e3",
             padding: 32,
-            height: 500,
+            height: 520,
 
             "@media only screen and (max-width: 950px)": {
               height: "auto",
@@ -311,14 +311,14 @@ const TaxCredits = () => {
             css={{
               background: "white",
               padding: 32,
-              height: 440,
+              height: 420,
               marginTop: 20,
 
               marginRight: 20,
               overflow: "scroll",
               "@media only screen and (max-width: 1000px)": {
                 margin: "auto",
-                height: 360,
+                height: 440,
               },
             }}>
             <Text

@@ -160,36 +160,6 @@ const PropertiesOne = () => {
             }}>
             Learn How to Save 100% on your Power Bill
           </Text>
-          <SizedBox height={16} />
-          <Row>
-            <Button
-              auto
-              className={montserrat.className}
-              css={{
-                background: "#8205E9",
-                borderRadius: 5,
-                fontSize: 16,
-                width: 94,
-
-                fontWeight: "bold",
-              }}>
-              Get
-            </Button>
-            <SizedBox width={24} />
-            <Button
-              auto
-              className={montserrat.className}
-              css={{
-                background: "#00C2FF",
-                borderRadius: 5,
-                fontSize: 16,
-                width: 94,
-
-                fontWeight: "bold",
-              }}>
-              FREE CONSULT
-            </Button>
-          </Row>
         </div>
       </div>
       <Container

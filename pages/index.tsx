@@ -1,15 +1,9 @@
 "use client";
 import Head from "next/head";
-import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
 import { montserrat } from "./_app";
-import { Text, Container, Image, Button, Row, Grid } from "@nextui-org/react";
+import { Text, Container, Image, Button, Row } from "@nextui-org/react";
 import SizedBox from "../components/sized_box";
-import React, { useState } from "react";
-import HeaderText from "../components/header_text";
-import WhyKinetic from "../components/why_kinetic_overlay";
-import WhyLoser from "../components/why_loser";
-import OfferImage from "../components/offer_image";
+import React from "react";
 import HeaderSection from "../components/sections/section_1";
 import PropertiesOne from "../components/properties/properties_1";
 import SectionTwo from "../components/sections/setion_2";
@@ -19,10 +13,9 @@ import TaxCredits from "../components/sections/tax_credits";
 import AppSnapshots from "../components/sections/app_snapshots";
 import PanelDetails from "../components/sections/panel_details";
 import MyNavBar from "../components/sections/navbar";
+import SliderPros from "../components/sections/slider_pros";
 
 export default function Home() {
-  const [index, setIndex] = useState(0);
-
   return (
     <div
       style={{
@@ -332,170 +325,7 @@ export default function Home() {
           background: "black",
           padding: 32,
         }}>
-        <div style={{ position: "relative", background: "black" }}>
-          <Image
-            draggable={false}
-            src={`/project_${index + 1}.png`}
-            alt='lightning'
-            objectFit='cover'
-            css={{
-              width: "100%",
-              maxWidth: 800,
-              transition: "ease",
-              zIndex: 0,
-              margin: "auto",
-              padding: 0,
-              display: "flex",
-            }}
-          />
-        </div>
-        <SizedBox height={32} />
-        <Row align='flex-end'>
-          <div
-            style={{
-              width: "calc(100%/5)",
-              // maxWidth: 350,
-              height: index == 0 ? 5 : 2,
-              background: index == 0 ? "#cd00ee" : "#777777",
-            }}></div>
-
-          <div
-            style={{
-              width: "calc(100%/5)",
-              // maxWidth: 250,
-              height: index == 1 ? 5 : 2,
-              background: index == 1 ? "#cd00ee" : "#777777",
-            }}></div>
-          <div
-            style={{
-              width: "calc(100%/5)",
-              // maxWidth: 250,
-              height: index == 2 ? 5 : 2,
-              background: index == 2 ? "#cd00ee" : "#777777",
-            }}></div>
-          <div
-            style={{
-              width: "calc(100%/5)",
-              // maxWidth: 250,
-              height: index == 3 ? 5 : 2,
-              background: index == 3 ? "#cd00ee" : "#777777",
-            }}></div>
-          <div
-            style={{
-              width: "calc(100%/5)",
-              // maxWidth: 250,
-              height: index == 4 ? 5 : 2,
-              background: index == 4 ? "#cd00ee" : "#777777",
-            }}></div>
-        </Row>
-        <SizedBox height={10} />
-        <Row justify='space-between'>
-          <div
-            style={{
-              width: "calc(100%/5)",
-              maxWidth: 250,
-              cursor: "pointer",
-              height: "auto",
-            }}
-            onClick={() => {
-              setIndex(0);
-            }}>
-            <Text
-              className={montserrat.className}
-              css={{
-                fontSize: 14,
-                color: index == 0 ? "white" : "#4F4F4F",
-                fontWeight: "bold",
-              }}>
-              Powerful Enough to run Everything you are used to at the same time
-              just like being grid connected
-            </Text>
-          </div>
-
-          <div
-            style={{
-              width: "calc(100%/5)",
-              maxWidth: 250,
-              cursor: "pointer",
-              height: "auto",
-            }}
-            onClick={() => {
-              setIndex(1);
-            }}>
-            <Text
-              className={montserrat.className}
-              css={{
-                fontSize: 14,
-                color: index == 1 ? "white" : "#4F4F4F",
-                fontWeight: "bold",
-              }}>
-              Power AC, Pools, and Charge your EV with out worries off grid
-            </Text>
-          </div>
-
-          <div
-            style={{
-              width: "calc(100%/5)",
-              maxWidth: 250,
-              cursor: "pointer",
-              height: "auto",
-            }}
-            onClick={() => {
-              setIndex(2);
-            }}>
-            <Text
-              className={montserrat.className}
-              css={{
-                fontSize: 14,
-                color: index == 2 ? "white" : "#4F4F4F",
-                fontWeight: "bold",
-              }}>
-              Generate power with out solar any time in any weather and off Grid
-            </Text>
-          </div>
-
-          <div
-            style={{
-              width: "calc(100%/5)",
-              maxWidth: 250,
-              cursor: "pointer",
-              height: "auto",
-            }}
-            onClick={() => {
-              setIndex(3);
-            }}>
-            <Text
-              className={montserrat.className}
-              css={{
-                fontSize: 14,
-                color: index == 3 ? "white" : "#4F4F4F",
-                fontWeight: "bold",
-              }}>
-              Capture 100% efficiency of the sun
-            </Text>
-          </div>
-
-          <div
-            style={{
-              width: "calc(100%/5)",
-              maxWidth: 250,
-              cursor: "pointer",
-              height: "auto",
-            }}
-            onClick={() => {
-              setIndex(4);
-            }}>
-            <Text
-              className={montserrat.className}
-              css={{
-                fontSize: 14,
-                color: index == 4 ? "white" : "#4F4F4F",
-                fontWeight: "bold",
-              }}>
-              Maximize Utility Benefits
-            </Text>
-          </div>
-        </Row>
+        <SliderPros />
       </div>
       <div style={{ position: "relative", background: "white" }}>
         <Image
