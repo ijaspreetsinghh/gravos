@@ -61,14 +61,19 @@ const Comparison = () => {
           />
         </Row>
       </Row>
-      <Container
-        responsive={false}
-        css={{ background: "#1d1d1d", paddingTop: 30, paddingBottom: 30 }}>
-        <Image
-          src='/comparison.svg'
-          alt='Comparison Gravos vs Conventional Solar Panel'
-        />
-      </Container>
+      <div style={{ background: "#1d1d1d", paddingTop: 30, paddingBottom: 30 }}>
+        {" "}
+        <Container
+          lg
+          css={{ background: "#1d1d1d", paddingTop: 30, paddingBottom: 30 }}>
+          <Image
+            src='/comparison.svg'
+            alt='Comparison Gravos vs Conventional Solar Panel'
+            objectFit='contain'
+            css={{ height: "fit-content" }}
+          />
+        </Container>
+      </div>
     </div>
   );
 };
